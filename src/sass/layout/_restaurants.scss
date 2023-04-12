@@ -1,0 +1,29 @@
+@use "../abstracts/" as *;
+
+.restaurants {
+  background: $color-bg-light;
+  padding: 2.5em 1.25em 3.5em 1.25em;
+  width: 100%;
+
+  .restaurants-container {
+    margin: 0 auto;
+    max-width: 1090px;
+    justify-items: center;
+
+    @include lg() {
+      padding-left: 25px;
+    }
+  }
+
+  .card-container {
+    display: flex;
+    flex-direction: column;
+    column-gap: 1.25em;
+
+    @include lg() {
+      flex-direction: row;
+      overflow: auto;
+      white-space: nowrap;
+    }
+  }
+}

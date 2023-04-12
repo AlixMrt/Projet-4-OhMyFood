@@ -1,0 +1,96 @@
+@use "../abstracts/" as *;
+
+.loader-container {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: $color-bg-medium;
+  position: fixed;
+  z-index: 100;
+
+  .line {
+    width: 200px;
+    border-bottom: 10px solid $color-primary;
+    border-radius: 20px;
+    position: relative;
+    animation: animateline 1.8s linear infinite;
+  }
+
+  .circle {
+    position: absolute;
+    left: 0;
+    bottom: -50%;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background: white;
+    animation: animatecircle 1.8s ease-in-out infinite;
+    z-index: -2;
+  }
+}
+
+@keyframes animatecircle {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: calc(100% - 75px);
+    transform: rotate(720deg);
+  }
+  100% {
+    left: 0;
+  }
+}
+@keyframes animateline {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+// Loading the page animations
+
+// $text-load-duration: 3000ms;
+// $text-load-delay: 4000ms;
+
+.dish-type:nth-child(1) {
+  animation: text-load 1s ease-out;
+  animation-delay: 1.4s;
+}
+.dish-type:nth-child(2) {
+  animation: text-load 1.4s ease-in-out;
+  animation-delay: 1.6s;
+}
+.dish-type:nth-child(3) {
+  animation: text-load 1.8s ease-in-out;
+  animation-delay: 1.8s;
+}
+
+@keyframes text-load {
+  0% {
+    transform: translateY(-0.5em);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(-0.5em);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

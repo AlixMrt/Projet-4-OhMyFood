@@ -1,0 +1,103 @@
+@use "../abstracts/" as *;
+@use "../layout/" as *;
+
+.btn {
+  padding: 1.3em 1.4em;
+  @include box-shadow--light;
+  border: none;
+  &:hover {
+    cursor: pointer;
+    @include box-shadow--medium;
+  }
+}
+
+.btn--main-action {
+  position: relative;
+  margin: 2em auto;
+  font-weight: $fw-medium;
+  border-radius: 35px;
+  color: $color-font-lightest;
+  z-index: 1;
+  background: $linear-gradient-dark;
+  @include hoverGradient(35px, $linear-gradient-light);
+
+  &__menu {
+    padding: 1.3em 4.8em;
+  }
+}
+
+.btn--wide-main {
+  position: relative;
+  padding: 28px 0;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 500px;
+  display: flex;
+  align-items: center;
+  background: $color-bg-light;
+  z-index: 1;
+  justify-content: left;
+  @include lg() {
+    width: 28vw;
+  }
+
+  .explanation-number {
+    position: absolute;
+    background: $color-primary;
+    border-radius: 50%;
+    padding: 0.5rem 0.8rem;
+    color: white;
+    left: -1rem;
+    font-weight: $fw-medium;
+  }
+
+  @include hoverColor(20px, $color-bg-accent);
+  &:hover {
+    i {
+      color: $color-primary;
+    }
+  }
+}
+
+.menu-list {
+  display: block;
+  width: 100%;
+}
+
+.btn--wide-menu {
+  margin: 0 auto;
+  display: block;
+  padding: 0 0 0 0.8em;
+  border-radius: 20px;
+  width: 100%;
+  background: $color-bg-lightest;
+  align-items: center;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  transition: transform 1s;
+  margin-bottom: 0.8em;
+  overflow: hidden;
+
+  @include box-shadow--light;
+
+  &:hover {
+    @include box-shadow--medium;
+  }
+
+  &:hover .price {
+    transform: translateX(2px);
+  }
+  &:hover .check-inner-container {
+    transform: rotate(-90deg);
+  }
+}
+
+.btn--new {
+  padding: 0.5em 0.8em;
+  background: $color-tertiary;
+  color: $color-font-secondary;
+  border-radius: 2px;
+  font-weight: $fw-medium;
+  font-size: $fs-smallest;
+}

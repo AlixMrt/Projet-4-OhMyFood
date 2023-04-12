@@ -1,0 +1,77 @@
+@use "../abstracts/" as *;
+
+.card {
+  border-radius: 20px;
+  background: $color-bg-lightest;
+  overflow: hidden;
+  margin: 0.75em auto;
+
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  @include box-shadow--light;
+
+  @include lg() {
+    margin: 1.5em auto;
+  }
+
+  figure {
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 15em;
+      object-fit: cover;
+      @include lg() {
+        width: 340px;
+        height: 170px;
+      }
+    }
+
+    .btn--new {
+      position: absolute;
+      top: 5.5%;
+      right: 3.5%;
+    }
+  }
+  .figcaption {
+    height: 35%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 1.5em 0.5em 1em;
+
+    .description {
+      .h4 {
+        margin: 0.5em auto;
+      }
+    }
+
+    .heart-container {
+      position: relative;
+    }
+    .fa-heart {
+      position: absolute;
+      top: 0.15em;
+      right: 100%;
+      font-size: 25px;
+      transition: all 0.3s ease-out;
+
+      &:hover,
+      &:active {
+        cursor: pointer;
+        transform: scale(1.15);
+      }
+      &:hover,
+      &:active .fa-solid {
+        opacity: 1;
+      }
+    }
+
+    .fa-solid {
+      opacity: 0;
+      color: transparent;
+      background-image: $linear-gradient-dark;
+      -webkit-background-clip: text;
+    }
+  }
+}

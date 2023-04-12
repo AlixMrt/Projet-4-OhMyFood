@@ -1,0 +1,103 @@
+@use "../abstracts/" as *;
+
+////////////
+// Global Font
+////////////
+
+html {
+  font-family: $font-primary;
+}
+
+* {
+  font-family: $font-primary;
+}
+
+////////////
+// Headings
+////////////
+
+.h1 {
+  &__home {
+    font-size: $fs-medium;
+    font-weight: $fw-bold;
+    margin: 1rem auto;
+  }
+  &__menu {
+    font-size: $fs-large;
+    font-family: $font-secondary;
+    font-weight: $fw-regular;
+    margin: 1rem 0;
+  }
+}
+.h2 {
+  &__home {
+    font-size: $fs-medium;
+    font-weight: $fw-bold;
+    margin: 1rem auto;
+  }
+  // &__menu {
+  //   // font-size: $fs-medium;
+  //   // font-weight: $fw-bold;
+  //   // font-size: 1.5rem;
+  // }
+}
+
+.h3 {
+  font-size: $fs-regular;
+  font-weight: $fw-bold;
+
+  &__explore {
+    font-weight: $fw-light;
+  }
+
+  &__restaurants {
+    font-weight: $fw-bold;
+  }
+
+  &__menu {
+    font-weight: $fw-medium;
+    margin-bottom: 0.2em;
+  }
+
+  &__logo {
+    font-family: $font-secondary;
+    font-weight: $fw-regular;
+  }
+  &__logo-loader {
+    font-family: $font-secondary;
+    font-weight: $fw-regular;
+    color: black;
+    font-size: 36.5px;
+  }
+}
+
+.h4 {
+  font-size: $fs-small;
+
+  &__location {
+    color: $color-font-medium;
+    font-weight: $fw-medium;
+  }
+  &__explanation {
+    font-weight: $fw-medium;
+  }
+  &__restaurants {
+    font-weight: $fw-light;
+  }
+
+  &__menu {
+    font-weight: $fw-light;
+    text-transform: uppercase;
+    margin: 2rem 0 1rem 0;
+  }
+}
+
+.p {
+  font-size: $fs-smallest;
+  font-weight: $fw-light;
+  text-align: left;
+
+  &__price {
+    font-weight: $fw-bold;
+  }
+}
