@@ -10,7 +10,18 @@
   background-color: $color-bg-medium;
   position: fixed;
   z-index: 100;
+  // animation: hideLoader 1.8s linear;
+  animation: fadeout 0.2s 2.5s forwards;
 
+  @keyframes fadeout {
+    from {
+      opacity: 100%;
+    }
+    to {
+      opacity: 0%;
+      visibility: hidden;
+    }
+  }
   .line {
     width: 200px;
     border-bottom: 10px solid $color-primary;
@@ -31,7 +42,14 @@
     z-index: -2;
   }
 }
-
+// @keyframes hideLoader {
+//   0% {
+//     left: 0;
+//   }
+//   100% {
+//     z-index: -100;
+//   }
+// }
 @keyframes animatecircle {
   0% {
     left: 0;
